@@ -1,0 +1,882 @@
+/*макс. ширину взяла из макета и видимо зря. Горизонтальный скролл - как избавиться? Если сжать браузер, все едет,
+блоки лезут друг на друга, все ужасно((*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+#wrapper {
+    background: white;
+    overflow-x: hidden;
+}
+
+/*BEGINNING - header*/
+
+.header_pic {
+    height: 670px;
+}
+/*как сделать так, чтоб картинка не сжималась при сжатии браузера?*/
+.header_pic > img {
+    width: 100%;
+    height: 670px;
+}
+
+.header_info .logo {
+    position: absolute;
+    top: 15px;
+    left: 10%;
+
+}
+
+.header_info .menu {
+    position: absolute;
+    top: 36px;
+    left: 35%;
+
+}
+/*как увеличить отступ между списком и промо-текстом при сжатии браузера?*/
+@media screen and (max-width: 930px) {
+    .header_info .menu {
+        width: 120px;
+        left: 45%;
+        top: 20%;
+    }
+}
+
+/*как увеличить отступ снизу каждого li при сжатии браузера и соответственно сжатии списка?*/
+.header_info .menu li {
+    display: inline;
+    margin-right: 30px;
+
+}
+
+.header_info .menu a {
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+}
+
+.header_pic .menu .blue a {
+    color: #00e0d0;
+}
+
+.overlap_info {
+    position: absolute;
+    top: 228px;
+    left: 0;
+    width: 100%;
+}
+
+.overlap_info .button {
+    text-align: center;
+    width: 125px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.overlap_info .button a {
+    text-decoration: none;
+    color: #00e0d0;
+    font-family: HammersmithOne;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #00e0d0;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 2px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.promo_text {
+    text-align: center;
+    color: #fff;
+    width: 760px;
+    margin: 0 auto;
+}
+
+.promo_text h1 {
+    font-family: PlayfairDisplay;
+    font-size: 40px;
+    font-weight: 900;
+    padding: 25px;
+    line-height: 30px;
+}
+
+.promo_text hr {
+    width: 50px;
+    height: 1px;
+    background-color: #00e0d0;
+    margin: 15px auto;
+}
+
+.promo_text p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.meatballs {
+    width: 64px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 110px;
+}
+
+.meatball {
+    border: 1px solid #c2c2c2;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+}
+
+.meatball:hover {
+    background-color: #00e0d0;
+    border: 1px solid #00e0d0;
+}
+
+.meatball.active {
+    background-color: #00e0d0;
+    border: 1px solid #00e0d0;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+}
+
+.meatball.active:hover {
+    border: 1px solid #c2c2c2;
+}
+
+/* END - header */
+/* BEGINNING - main: story section */
+
+.story {
+    height: 500px;
+}
+
+.picture > img {
+    float: left;
+    margin-top: 100px;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+/* все объекты добывала из Авокода, размеры и отступы тоже вначале брала оттуда, потом все начало
+ехать и размеры я меняла(( */
+
+.info_content {
+    float: left;
+    margin-top: 7%;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    width: 300px;
+}
+
+.our_story h2 {
+    font-family: Roboto;
+    line-height: 30px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.our_story p {
+    font-family: Roboto;
+    line-height: 17px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.button_story {
+    text-align: center;
+    width: 125px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.button_story a {
+    text-decoration: none;
+    color: #00e0d0;
+    font-family: HammersmithOne;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #00e0d0;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 2px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+/* END - main: story section */
+/* BEGINNING - main: video section */
+
+.video {
+    margin-bottom: 220px;
+}
+
+.video .background {
+    height: 550px;
+}
+
+.video .controls {
+    margin-top: 70px;
+    margin-left: 600px;
+}
+
+.video .watch {
+    margin-top: 30px;
+    margin-left: 580px;
+    width: 156px;
+    height: 12px;
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+/*END - main: video section */
+/*BEGINNING - main: expertise section */
+
+.expertise {
+    margin-bottom: 100px;
+}
+
+.expertise .expertise_header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.expertise .expertise_header h2 {
+    color: #413d4b;
+    font-family: PlayfairDisplay;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.expertise .expertise_header p {
+    opacity: 0.75;
+    color: #2f2d35;
+    font-family: PlayfairDisplay;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.expertise .expertise_header hr {
+    width: 50px;
+    height: 2px;
+    opacity: 0.3;
+    background-color: #413d4b;
+}
+
+.expertise table {
+    margin: 0 250px;
+    border-collapse: collapse;
+}
+
+.expertise td {
+    text-align: center;
+    padding: 20px;
+}
+
+.expertise .item_1 {
+     border-right: 1px solid lightgrey;
+     border-bottom: 1px solid lightgrey;
+ }
+
+.expertise .item_2 {
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+.expertise .item_3 {
+    border-bottom: 1px solid lightgrey;
+}
+
+.expertise .item_4 {
+    border-right: 1px solid lightgrey;
+}
+
+.expertise .item_5 {
+    border-right: 1px solid lightgrey;
+}
+
+.expertise .item_1,
+.expertise .item_2,
+.expertise .item_3,
+.expertise .item_4,
+.expertise .item_5,
+.expertise .item_6 h3 {
+    height: 10px;
+    color: #413d4b;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.expertise .item_2 h3 {
+    margin-top: 5px;
+}
+
+.expertise .item_1,
+.expertise .item_2,
+.expertise .item_3,
+.expertise .item_4,
+.expertise .item_5,
+.expertise .item_6 p {
+    width: 254px;
+    height: 58px;
+    opacity: 0.75;
+    color: #333;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+}
+
+/*END - main: expertise section */
+/*BEGINNING - main: team section */
+
+.team {
+    position: relative;
+}
+
+.team img{
+    width: 1600px;
+    height: 712px;
+}
+
+
+.team .team_content .team_description h2{
+    position: absolute;
+    top: 70px;
+    left: 530px;
+    width: 312px;
+    height: 16px;
+    color: white;
+    font-family: PlayfairDisplay;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.team .team_content .team_description p {
+    position: absolute;
+    top: 110px;
+    left: 510px;
+    width: 401px;
+    height: 15px;
+    color: #f9f9f9;
+    font-family: PlayfairDisplay;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.team .team_content .team_description hr {
+    position: absolute;
+    top: 150px;
+    left: 660px;
+    width: 50px;
+    height: 2px;
+    opacity: 0.2;
+    background-color: white;
+}
+
+.team .team_content .team_members {
+    position: absolute;
+    top: 200px;
+    left: 250px;
+
+}
+
+.team .team_content .team_members .member {
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.team .team_content .team_members img {
+    width: 200px;
+    height: 209px;
+}
+
+.team .team_content .team_members .member p{
+
+    height: 9px;
+    opacity: 0.7;
+    color: #fafafa;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.team .team_content .team_members .member span {
+    height: 10px;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.team .team_content .team_members .member figcaption {
+    margin-top: -5px;
+    width: 198px;
+    height: 80px;
+    opacity: 0.5;
+    border: 1px solid #e1e1e1;
+}
+
+.team .team_content .join_us p {
+    position: absolute;
+    top: 540px;
+    left: 560px;
+    width: 307px;
+    height: 14px;
+    color: #f3f3f3;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+.button_team a {
+    position: absolute;
+    top: 600px;
+    left: 610px;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    color: #00e0d0;
+    font-family: HammersmithOne;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #00e0d0;
+    border-radius: 2px;
+}
+
+/* END - main: team section */
+/* BEGINNING - main: projects section */
+
+.projects {
+    margin-bottom: 100px;
+}
+
+.projects .works {
+    margin-bottom: 100px;
+}
+
+.projects .works h3 {
+    position: relative;
+    top: 50px;
+    left: 200px;
+    width: 142px;
+    height: 16px;
+    color: #413d4b;
+    font-family: PlayfairDisplay;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.projects .works p {
+    position: relative;
+    top: 10px;
+    left: 800px;
+    width: 173px;
+    height: 14px;
+    color: #413d4b;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+.project .works a {
+    text-decoration: none;
+}
+
+.projects .works img {
+    position: relative;
+    top: -15px;
+    left: 960px;
+    width: 8px;
+    height: 13px;
+    opacity: 0.7;
+}
+
+.projects .samples {
+    margin-left: 30px;
+    margin-bottom: 100px;
+}
+
+.projects .samples img {
+    display: inline-block;
+    margin: -10px;
+    width: 230px;
+    height: 170px;
+}
+
+.projects .button_projects a {
+    text-decoration: none;
+    margin-left: 600px;
+    padding: 10px 20px;
+    width: 85px;
+    height: 10px;
+    color: #00e0d0;
+    font-family: HammersmithOne;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #00e0d0;
+    border-radius: 2px;
+}
+
+/* END - main: projects section*/
+/* BEGINNING - main: quotes section */
+
+.quotes {
+    position: relative;
+}
+
+.quotes .quotes_content {
+    height: 500px;
+}
+
+.quotes .quotes_content .quotation img {
+    position: absolute;
+    top: 60px;
+    left: 650px;
+}
+
+.quotes .quotes_content .quotation p {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    width: 770px;
+    height: 95px;
+    opacity: 0.85;
+    color: white;
+    font-family: PlayfairDisplay;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.quotes .quotes_content .jane p {
+    position: absolute;
+    top: 250px;
+    left: 600px;
+    height: 9px;
+    opacity: 0.7;
+    color: white;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+}
+
+.quotes .quotes_content .jane span {
+    height: 10px;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 22px;
+}
+
+.quotes .quotes_content .persons {
+    position: absolute;
+    top: 350px;
+    left: 490px;
+}
+
+.quotes .quotes_content .persons img {
+    margin-right: 10px;
+}
+
+/* END - main: quotes section */
+/* BEGINNING - main: feedback section */
+
+.feedback {
+    position: relative;
+    margin-top: 50px;
+
+}
+
+.feedback .feedback_form {
+    float: left;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+.feedback .feedback_form h3 {
+    margin-bottom: 30px;
+    width: 266px;
+    height: 16px;
+    color: #413d4b;
+    font-family: PlayfairDisplay;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.feedback .feedback_form input[type="text"] {
+    padding-left: 10px;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+    opacity: 0.1;
+    border: 1px solid black;
+}
+
+.feedback .feedback_form textarea {
+    padding-left: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+    opacity: 0.1;
+    border: 1px solid black;
+}
+
+.feedback .feedback_form input[type="submit"] {
+    padding: 10px 30px;
+    color: #00e0d0;
+    background: transparent;
+    font-family: HammersmithOne;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #00e0d0;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    border-radius: 5px;
+}
+
+/* можно ли вообще таким способом менять содержимое плейсхолдера? */
+
+.feedback .feedback_form input[type="text"]::-webkit-input-placeholder {
+    color: black;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.feedback .feedback_form textarea::-webkit-input-placeholder {
+    color: black;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.feedback .clients {
+    position: absolute;
+    left: 800px;
+    display: inline-block;
+    width: 400px;
+}
+
+.feedback .clients h3 {
+    margin-bottom: 50px;
+    width: 228px;
+    height: 16px;
+    color: #413d4b;
+    font-family: PlayfairDisplay;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.feedback .clients img {
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.feedback .clients img:nth-child(6) {
+    margin-right: 70px;
+}
+
+.feedback .clients img:nth-child(8) {
+    margin-right: 90px;
+}
+
+.feedback .clients img:nth-child(10) {
+    margin-right: 90px;
+}
+
+/* END - main: feedback section*/
+/* BEGINNING - footer */
+
+.footer_content {
+    position: relative;
+}
+
+.footer_content .logo_info {
+    margin-left: 100px;
+    position: absolute;
+    top: 600px;
+}
+
+.footer_content .logo_info img {
+
+    width: 120px;
+    height: 75px;
+}
+
+.footer_content .logo_info p {
+    width: 283px;
+    height: 89px;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.footer_content .our_studio {
+    position: absolute;
+    top: 600px;
+    left: 500px;
+    color: white;
+}
+
+.footer_content .our_studio img {
+    margin-right: 20px;
+}
+
+.footer_content .our_studio h4 {
+    margin-bottom: 50px;
+    width: 94px;
+    height: 11px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 26px;
+}
+
+.footer_content .our_studio p {
+    margin-bottom: 30px;
+    width: 237px;
+    height: 63px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.footer_content .in_touch {
+    position: absolute;
+    top: 600px;
+    left: 900px;
+}
+
+.footer_content .in_touch h4 {
+    width: 115px;
+    height: 11px;
+    color: white;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 26px;
+}
+
+.footer_content .in_touch a img{
+    position: relative;
+    top: 15px;
+    left: 20px;
+    padding: 5px 20px;
+    opacity: 0.5;
+    background-color: lightblue;
+    border: 1px solid lightblue;
+}
+
+.footer_content .in_touch input[type="text"] {
+    background: transparent;
+    padding: 10px;
+    border: 1px solid white;
+    opacity: 0.5;
+}
+
+.footer_content .in_touch input[type="text"]::-webkit-input-placeholder {
+    opacity: 0.75;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.footer_content .networks {
+    position: absolute;
+    top: 750px;
+    left: 900px;
+}
+
+.footer_content .networks img {
+    margin-right: 5px;
+    border: 1px solid white;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    border-radius: 60px;
+    padding: 5px;
+}
+
+/* с "-child" ниже треш угар и содомия(( */
+
+.footer_content .networks img:first-child {
+   padding: 5px 10px;
+}
+
+.footer_content .networks img:nth-child(2) {
+    padding: 7px;
+}
+
+.footer_content .networks img:last-child {
+    padding: 7px;
+}
+
+.footer_content .footer_menu ul {
+    list-style: none;
+    position: absolute;
+    top: 870px;
+    left: 60px;
+}
+
+.footer_content .footer_menu ul li {
+
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer_content .footer_menu ul li a {
+    width: 301px;
+    height: 10px;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration: none;
+}
+
+.footer_content .copyright {
+    position: absolute;
+    top: 880px;
+    left: 900px;
+    width: 226px;
+    height: 14px;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+
+
